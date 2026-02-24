@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شمسا | صنایع دستی و شمع - اینماد ۴۹۴۲۸۱۱۰</title>
+  <!-- فونت وزیرمتن برای فارسی (وزیر) -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- فونت‌آیکون FontAwesome 5 (رایگان) -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+
+    body {
+      background-color: #f9fbfd;
+      color: #1e2b3c;
+      line-height: 1.6;
+    }
+
+    /* رنگ‌بندی اصلی: فیروزه‌ای و سفید */
+    :root {
+      --turquoise: #0ab6ab;
+      --turquoise-light: #d4f3f0;
+      --white: #ffffff;
+      --dark-bg: #1e3a3a;
+      --shadow: 0 10px 30px rgba(0, 181, 173, 0.1);
+      --border-pattern: #b8e2de;
+    }
+
+    /* الگوی سنتی ایرانی (خطوط کاشی کاری ظریف) */
+    .bg-pattern {
+      background-image: 
+        repeating-linear-gradient(45deg, rgba(10, 182, 171, 0.03) 0px, rgba(10, 182, 171, 0.03) 4px, transparent 4px, transparent 12px),
+        repeating-linear-gradient(135deg, rgba(10, 182, 171, 0.02) 0px, rgba(10, 182, 171, 0.02) 6px, transparent 6px, transparent 16px);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* هدر جذاب با نقوش سنتی */
+    header {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border-bottom: 4px solid var(--turquoise);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #0ab6ab 0%, #f7e9b0 30%, #0ab6ab 70%, #f7e9b0 100%);
+      opacity: 0.4;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 16px 0;
+      position: relative;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      background: var(--turquoise);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      box-shadow: 0 4px 10px rgba(10,182,171,0.3);
+    }
+
+    .brand-name h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #0a4d4a;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .brand-name span {
+      font-size: 0.9rem;
+      color: var(--turquoise);
+      display: block;
+      font-weight: 400;
+    }
+
+    /* اینماد در هدر (همان کد ۴۹۴۲۸۱۱۰) */
+    .enamad-badge {
+      background: linear-gradient(145deg, #0ab6ab, #0f9b91);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 12px rgba(10,182,171,0.3);
+      border: 2px solid #ffe8b5;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s;
+    }
+
+    .enamad-badge i {
+      font-size: 1.3rem;
+      color: #ffde9e;
+    }
+
+    .enamad-badge:hover {
+      transform: scale(1.02);
+    }
+
+    /* منوی ناوبری */
+    nav {
+      margin-top: 12px;
+      width: 100%;
+      border-top: 2px dashed var(--turquoise);
+      border-bottom: 2px dashed var(--turquoise);
+      padding: 12px 0;
+      background: rgba(10,182,171,0.02);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1e3a3a;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 4px 12px;
+      border-radius: 30px;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    nav ul li a:hover, nav ul li a.active {
+      background: var(--turquoise);
+      color: white;
+    }
+
+    nav ul li a i {
+      margin-left: 6px;
+      font-size: 0.9rem;
+    }
+
+    /* بخش قهرمان (hero) با تم سنتی */
+    .hero {
+      background: linear-gradient(115deg, #ffffff 50%, #d4f3f0 100%);
+      padding: 48px 0;
+      border-radius: 0 0 60px 60px;
+      margin-bottom: 40px;
+      box-shadow: inset 0 -10px 20px rgba(10,182,171,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "⚘ ⚘ ⚘";
+      font-size: 80px;
+      color: rgba(10,182,171,0.08);
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      transform: rotate(-15deg);
+      white-space: nowrap;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #0b5b55;
+      line-height: 1.3;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #2c4e4a;
+      margin: 20px 0;
+    }
+
+    .hero-text .btn {
+      background: var(--turquoise);
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(10,182,171,0.3);
+      transition: 0.2s;
+      border: 2px solid #ffe9b0;
+    }
+
+    .hero-text .btn:hover {
+      background: #0e8d84;
+      transform: translateY(-4px);
+    }
+
+    .hero-image {
+      flex: 1 1 300px;
+      text-align: center;
+      font-size: 12rem;
+      color: var(--turquoise);
+      opacity: 0.9;
+      text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* بخش فیلتر محصولات (داینامیک) */
+    .filter-section {
+      margin: 48px 0;
+      text-align: center;
+    }
+
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .filter-btn {
+      background: white;
+      border: 2px solid var(--turquoise);
+      color: var(--turquoise);
+      padding: 10px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--turquoise);
+      color: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 32px 32px 32px 8px;  /* الهام از طاق ایرانی */
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-pattern);
+      transition: 0.25s ease;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(10,182,171,0.25);
+    }
+
+    .product-img {
+      height: 180px;
+      background: linear-gradient(145deg, #d4f3f0, #b0e3df);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: #0a6b63;
+      border-bottom: 3px solid var(--turquoise);
+    }
+
+    .product-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      font-size: 1.4rem;
+      color: #0e534e;
+      margin-bottom: 6px;
+    }
+
+    .product-info .price {
+      color: #d97706;
+      font-weight: 700;
+      font-size: 1.2rem;
+      direction: ltr;
+      display: inline-block;
+      margin: 10px 0;
+    }
+
+    .like-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+      border-top: 1px solid #eee;
+      padding-top: 12px;
+    }
+
+    .like-btn {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      color: #c0c0c0;
+      cursor: pointer;
+      transition: 0.1s;
+    }
+
+    .like-btn.liked {
+      color: #e63946;
+    }
+
+    .like-count {
+      font-weight: 700;
+      color: #0f4d48;
+    }
+
+    /* بخش حریم خصوصی (سیاست خصوصی) */
+    .privacy-section {
+      background: var(--white);
+      border: 2px solid var(--turquoise);
+      border-radius: 70px 20px 70px 20px;
+      padding: 40px 30px;
+      margin: 60px 0;
+      box-shadow: var(--shadow);
+      background-image: radial-gradient(circle at 10px 10px, rgba(10,182,171,0.05) 2px, transparent 2px), 
+                      radial-gradient(circle at 30px 30px, rgba(10,182,171,0.05) 2px, transparent 2px);
+      background-size: 40px 40px;
+    }
+
+    .privacy-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .privacy-header i {
+      font-size: 3rem;
+      color: var(--turquoise);
+      background: #e0f7f4;
+      padding: 15px;
+      border-radius: 50%;
+    }
+
+    .privacy-header h2 {
+      font-size: 2rem;
+      color: #08544d;
+    }
+
+    .privacy-text {
+      font-size: 1.1rem;
+      color: #1e3a3a;
+      padding-right: 30px;
+      border-right: 5px solid var(--turquoise);
+      margin-top: 15px;
+    }
+
+    /* فوتر جذاب با قوانین و اینماد */
+    footer {
+      background: #0b2b28;
+      color: #e2f0ee;
+      padding: 48px 0 24px;
+      margin-top: 60px;
+      border-top: 8px solid var(--turquoise);
+      position: relative;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: repeating-linear-gradient(90deg, #0ab6ab, #0ab6ab 20px, #f7d44b 20px, #f7d44b 40px);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-col h4 {
+      color: #f7e9b0;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #0ab6ab;
+      padding-bottom: 8px;
+      display: inline-block;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin: 12px 0;
+    }
+
+    .footer-col ul li a {
+      color: #cce2df;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--turquoise);
+      padding-right: 5px;
+    }
+
+    .enamad-footer {
+      background: #15423e;
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      color: white;
+      border: 2px solid #f7e9b0;
+      margin: 16px 0;
+    }
+
+    .enamad-footer i {
+      color: #f7d44b;
+      margin-left: 8px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px dashed #0ab6ab;
+      font-size: 0.95rem;
+    }
+
+    .footer-bottom p {
+      margin: 8px 0;
+    }
+
+    .footer-bottom .islamic-law {
+      font-weight: 700;
+      color: #f7e9b0;
+      background: #0e3a35;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 40px;
+    }
+
+    /* ریسپانسیو */
+    @media (max-width: 700px) {
+      .header-content {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .hero-text h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-pattern">
+
+<header>
+  <div class="container header-content">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <i class="fas fa-store-alt"></i>
+      </div>
+      <div class="brand-name">
+        <h1>شمسا</h1>
+        <span>صنایع دستی و شمع‌های ناب</span>
+      </div>
+    </div>
+
+    <!-- اینماد با کد ۴۹۴۲۸۱۱۰ در هدر (عنوان صفحه نیز تگ title است) -->
+    <div class="enamad-badge">
+      <i class="fas fa-certificate"></i>
+      <span>اینماد ۴۹۴۲۸۱۱۰</span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#" class="active"><i class="fas fa-home"></i>خانه</a></li>
+        <li><a href="#products"><i class="fas fa-gem"></i>صنایع دستی</a></li>
+        <li><a href="#products"><i class="fas fa-fire"></i>شمع‌ها</a></li>
+        <li><a href="#privacy"><i class="fas fa-lock"></i>حریم خصوصی</a></li>
+        <li><a href="#"><i class="fas fa-phone-alt"></i>تماس</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- بخش hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2>شمسا؛ اصالت ایرانی <br> با عطر شمع و هنر دست</h2>
+        <p>ترکیبی از طرح‌های سنتی و مدرن، همه‌ی محصولات با دست ساخته می‌شوند.</p>
+        <button class="btn"><i class="fas fa-shopping-bag"></i> خرید ویژه</button>
+      </div>
+      <div class="hero-image">
+        <i class="fas fa-crown"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- بخش محصولات با فیلتر داینامیک (پویا) -->
+  <section id="products" class="container filter-section">
+    <h2 style="font-size: 2rem; color: #0f6b63; margin-bottom: 20px;">محصولات شمسا</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">همه</button>
+      <button class="filter-btn" data-filter="handicraft">صنایع دستی</button>
+      <button class="filter-btn" data-filter="candle">شمع</button>
+    </div>
+
+    <div class="product-grid" id="product-grid">
+      <!-- نمونه محصولات (با کلاس‌های متفاوت) -->
+      <div class="product-card handicraft" data-category="handicraft">
+        <div class="product-img"><i class="fas fa-gem"></i></div>
+        <div class="product-info">
+          <h3>گل‌های میناکاری</h3>
+          <p>مینای دندان‌سازی اصفهان</p>
+          <span class="price">۳۲۰,۰۰۰ تومان</span>
+          <div class="like-section">
+            <button class="like-btn"><i class="fas fa-heart"></i></button>
+            <span class="like-count">۲۴</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-card handicraft" data-category="handicraft">
+        <div class="product-img"><i class="fas fa-palette"></i></div>
+        <div class="product-info">
+          <h3>خاتم‌کاری قاب</h3>
+          <p>طرح هفت رنگ</p>
+          <span class="price">۵۱۰,۰۰۰ تومان</span>
+          <div class="like-section">
+            <button class="like-btn"><i class="fas fa-heart"></i></button>
+            <span class="like-count">۱۷</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-card handicraft" data-category="handicraft">
+        <div class="product-img"><i class="fas fa-chess-board"></i></div>
+        <div class="product-info">
+          <h3>سفره هفت‌سین</h3>
+          <p>پارچه ابریشم قلمکار</p>
+          <span class="price">۲۸۰,۰۰۰ تومان</span>
+          <div class="like-section">
+            <button class="like-btn"><i class="fas fa-heart"></i></button>
+            <span class="like-count">۳۱</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-card candle" data-category="candle">
+        <div class="product-img"><i class="fas fa-fire"></i></div>
+        <div class="product-info">
+          <h3>شمع معطر گل یاس</h3>
+          <p>رایحه دلنشین</p>
+          <span class="price">۹۵,۰۰۰ تومان</span>
+          <div class="like-section">
+            <button class="like-btn"><i class="fas fa-heart"></i></button>
+            <span class="like-count">۵۶</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-card candle" data-category="candle">
+        <div class="product-img"><i class="fas fa-fire"></i></div>
+        <div class="product-info">
+          <h3>شمع فانوس سنتی</h3>
+          <p>با طرح کاشی</p>
+          <span class="price">۱۴۵,۰۰۰ تومان</span>
+          <div class="like-section">
+            <button class="like-btn"><i class="fas fa-heart"></i></button>
+            <span class="like-count">۲۲</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-card candle" data-category="candle">
+        <div class="product-img"><i class="fas fa-fire"></i></div>
+        <div class="product-info">
+          <h3>شمع لاکچری شمسا</h3>
+          <p>بسته ۳ عددی</p>
+          <span class="price">۲۰۰,۰۰۰ تومان</span>
+          <div class="like-section">
+            <button class="like-btn"><i class="fas fa-heart"></i></button>
+            <span class="like-count">۴۳</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- بخش حریم خصوصی (سیاست خصوصی) -->
+  <section id="privacy" class="container privacy-section">
+    <div class="privacy-header">
+      <i class="fas fa-user-shield"></i>
+      <h2>سیاست حفظ حریم خصوصی</h2>
+    </div>
+    <div class="privacy-text">
+      <p>در فروشگاه شمسا، اطلاعات شخصی شما نزد ما امانت است. ما از داده‌های شما فقط برای پردازش سفارش و بهبود خدمات استفاده می‌کنیم و هرگز بدون رضایت شما در اختیار شخص ثالث قرار نمی‌دهیم. برای اطلاعات بیشتر <a href="#" style="color:#0ab6ab;">اینجا</a> کلیک کنید.</p>
+    </div>
+  </section>
+</main>
+
+<!-- فوتر با قوانین و نماد -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4><i class="fas fa-store"></i> شمسا</h4>
+      <ul>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس با ما</a></li>
+        <li><a href="#">فرصت شغلی</a></li>
+        <li><a href="#privacy">حریم خصوصی</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fas fa-hand-holding-heart"></i> خدمات مشتریان</h4>
+      <ul>
+        <li><a href="#">پرسش‌های متداول</a></li>
+        <li><a href="#">رویه بازگردانی</a></li>
+        <li><a href="#">شرایط استفاده</a></li>
+        <li><a href="#">گزارش تخلف</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4><i class="fas fa-award"></i> نماد اعتماد</h4>
+      <div class="enamad-footer">
+        <i class="fas fa-check-circle"></i> اینماد ۴۹۴۲۸۱۱۰
+      </div>
+      <p style="margin-top: 10px;">صاحب این فروشگاه: شمسا handicrafts</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom container">
+    <p class="islamic-law"><i class="fas fa-balance-scale"></i> تابع قوانین جمهوری اسلامی ایران</p>
+    <p>© ۱۴۰۴ - تمام حقوق محفوظ است. فروشگاه شمسا (صنایع دستی و شمع)</p>
+    <p style="font-size:0.85rem;">طراحی با اصالت ایرانی و رنگ‌های فیروزه‌ای</p>
+  </div>
+</footer>
+
+<!-- اسکریپت‌های داینامیک (فیلتر و لایک) -->
+<script>
+  (function() {
+    // فیلتر محصولات
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const products = document.querySelectorAll('.product-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // حذف کلاس active از همه دکمه‌ها
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
+        const filterValue = this.getAttribute('data-filter');
+
+        products.forEach(product => {
+          if (filterValue === 'all') {
+            product.style.display = 'block';
+          } else {
+            if (product.classList.contains(filterValue)) {
+              product.style.display = 'block';
+            } else {
+              product.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    // دکمه لایک (پویا)
+    const likeBtns = document.querySelectorAll('.like-btn');
+    likeBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const likeSection = this.closest('.like-section');
+        const countSpan = likeSection.querySelector('.like-count');
+        let count = parseInt(countSpan.innerText, 10);
+
+        if (this.classList.contains('liked')) {
+          // دیسلایک
+          this.classList.remove('liked');
+          this.style.color = '#c0c0c0';
+          count -= 1;
+        } else {
+          // لایک
+          this.classList.add('liked');
+          this.style.color = '#e63946';
+          count += 1;
+        }
+        countSpan.innerText = count;
+      });
+    });
+
+    // مقداردهی اولیه رنگ لایک (اگر خواستیم پس‌زمینه)
+    likeBtns.forEach(btn => {
+      if (btn.classList.contains('liked')) {
+        btn.style.color = '#e63946';
+      } else {
+        btn.style.color = '#c0c0c0';
+      }
+    });
+  })();
+</script>
+<!-- کد اینماد به عنوان عنوان صفحه در title قرار دارد و در هدر نیز هست -->
+</body>
+</html>
